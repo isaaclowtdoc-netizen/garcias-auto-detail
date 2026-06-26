@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette */
+  --color-pitch:    #0C0C0C;
+  --color-carbon:   #161616;
+  --color-graphite: #1E1E1E;
+  --color-bone:     #F0ECE4;
+  --color-steel:    #6B6B6B;
+  --color-brass:    #C49B38;
+  --color-divider:  #2B2B2B;
+
+  /* Typography */
+  --font-display: var(--font-barlow), sans-serif;
+  --font-body:    var(--font-inter), sans-serif;
+
+  /* Max content width */
+  --width-content: 1280px;
+
+  /* Section vertical padding */
+  --spacing-section-desktop: 120px;
+  --spacing-section-tablet:  80px;
+  --spacing-section-mobile:  56px;
+
+  /* Grid gutter */
+  --spacing-gutter: 24px;
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0C0C0C;
+  color: #F0ECE4;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+/* Label / eyebrow utility */
+@layer utilities {
+  .text-label {
+    font-family: var(--font-barlow), sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6B6B6B;
+  }
+
+  /* Consistent image colour grade across all editorial images */
+  .img-grade {
+    filter: saturate(0.88);
+  }
+}
