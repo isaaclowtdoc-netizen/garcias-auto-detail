@@ -47,23 +47,22 @@ export default function Footer() {
         </nav>
 
         {/* Col 3 — Contact info */}
-        {/* TODO: Replace placeholder contact details with client info before launch */}
         <div className="flex flex-col gap-4">
           <div>
             <span className="text-label block mb-2">Hours</span>
             <ul className="font-body text-[16px] text-steel leading-[1.8] space-y-px">
-              <li>Mon – Fri &nbsp; 8am – 6pm</li>
-              <li>Saturday &nbsp; 9am – 4pm</li>
+              <li>Mon – Fri &nbsp; 8:30 AM – 5:00 PM</li>
+              <li className="italic">Saturday &nbsp; Closed</li>
               <li className="italic">Sunday &nbsp; Closed</li>
             </ul>
           </div>
           <div>
             <span className="text-label block mb-2">Call Us</span>
             <a
-              href="tel:+15555550000"
+              href="tel:+18642476343"
               className="font-display font-bold text-[24px] text-bone hover:text-brass transition-colors duration-150"
             >
-              (555) 555-0000
+              (864) 247-6343
             </a>
           </div>
         </div>

@@ -38,6 +38,30 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  name: "Garcia's Auto Detail",
+  telephone: "+18642476343",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "10105 Clemson Blvd",
+    addressLocality: "Seneca",
+    addressRegion: "SC",
+    postalCode: "29678",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:30",
+      closes: "17:00",
+    },
+  ],
+  url: "https://garcias-auto-detail.vercel.app",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +69,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${barlow.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      </head>
       <body>
         <NavBar />
         {children}
