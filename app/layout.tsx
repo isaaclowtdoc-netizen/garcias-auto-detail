@@ -17,12 +17,25 @@ const inter = Inter({
   display: "swap",
 });
 
+// TODO: Replace with custom domain once connected in Vercel dashboard
+const SITE_URL =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://garcias-auto-detail.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | Garcia's Auto Detail",
     default: "Garcia's Auto Detail",
   },
-  description: "Premium car detailing. Book an appointment online.",
+  description:
+    "Premium car detailing. Precision hand detailing for vehicles that deserve better. Book an appointment online.",
+  openGraph: {
+    type: "website",
+    siteName: "Garcia's Auto Detail",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
