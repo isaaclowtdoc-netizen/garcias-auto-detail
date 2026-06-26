@@ -1,13 +1,12 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Destination email — swap to client's address before launch
 const TO_EMAIL = "isaaclowtdoc@gmail.com";
 const FROM_EMAIL = "bookings@send.apexflowservices.com";
 
 export async function POST(request: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const body = await request.json().catch(() => null);
   if (!body) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
