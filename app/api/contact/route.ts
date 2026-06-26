@@ -6,7 +6,11 @@ const TO_EMAIL = "isaaclowtdoc@gmail.com";
 const FROM_EMAIL = "bookings@send.apexflowservices.com";
 
 export async function POST(request: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
+  }
+  const resend = new Resend(apiKey);
   const body = await request.json().catch(() => null);
   if (!body) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
