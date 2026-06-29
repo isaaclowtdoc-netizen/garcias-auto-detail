@@ -3,7 +3,7 @@ import GhostButton from "@/components/ui/GhostButton";
 
 export default function Hero() {
   return (
-    <section className="relative h-dvh w-full overflow-hidden flex items-end pt-[72px]">
+    <section className="relative h-dvh w-full overflow-hidden flex items-center">
       {/* Background video — swap src for client footage when available */}
       {/* Poster: dark placeholder until video loads */}
       <video
