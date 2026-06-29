@@ -44,7 +44,7 @@ export default function NavBar() {
         className={`fixed top-0 left-0 right-0 z-50 ${
           scrolled
             ? "bg-pitch/95 backdrop-blur-sm border-b border-divider"
-            : "bg-transparent border-b border-transparent"
+            : "bg-pitch/95 border-b border-transparent"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 xl:px-20 h-[72px] flex items-center justify-between">
