@@ -29,7 +29,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-10 xl:px-20 pb-20 md:pb-28">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-10 xl:px-20 pt-24 pb-20 md:pb-28">
         <div className="flex flex-col gap-6 max-w-[720px]">
           <span className="text-label text-brass tracking-[0.14em]">
             PREMIUM AUTO DETAILING
