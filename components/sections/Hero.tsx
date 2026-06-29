@@ -24,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(12,12,12,0.20) 0%, rgba(12,12,12,0.60) 50%, rgba(12,12,12,0.92) 100%)",
+            "linear-gradient(180deg, rgba(12,12,12,0.60) 0%, rgba(12,12,12,0.60) 50%, rgba(12,12,12,0.92) 100%)",
         }}
       />
 
